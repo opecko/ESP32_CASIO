@@ -65,8 +65,8 @@ int alarmBeepDelay = 150;
 // ========================================================
 // WIFI + NTP
 // ========================================================
-const char *ssid = "Doma";
-const char *password = "Heslo_ti_nereknu!";
+const char *ssid = "WiFi-Notebook";
+const char *password = "Notebook65";
 
 const char *ntpServer = "pool.ntp.org";
 const long gmtOffset_sec = 3600;
@@ -599,7 +599,7 @@ void drawAlarmSetup() {
     char hT[8];
     sprintf(hT, "%02d:%02d", timeinfo.tm_hour, timeinfo.tm_min);
     u8g2.setFont(textFont);
-    u8g2.drawStr(82, 12, hT);
+    u8g2.drawStr(84, 12, hT);
 
     char T[6];
     sprintf(T, "%c%c:%c%c", H1, H2, M1, M2);
@@ -652,6 +652,7 @@ void alarmAlarming() {
   char timeBuf[6];
   sprintf(timeBuf, "%02d:%02d", timeinfo.tm_hour, timeinfo.tm_min);
 
+  u8g2.setFont(hodinyFont);
   u8g2.drawStr(6, 44, timeBuf);
 
   unsigned long now = millis();
