@@ -1,4 +1,4 @@
-# ESP32_Casio
+# ESP32 CASIO
 This project is supposed to imitate the old casio-style digital watches.
 
 > this is the definition of spaghetti code imo
